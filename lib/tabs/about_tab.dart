@@ -43,25 +43,23 @@ class AboutTab extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
                         child: Image.asset(Assets.github)),
-                    label: Text('Github'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_GITHUB, 'Nehal Jaisalmeria'),
                   ),
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
                         child: Image.asset(Assets.twitter)),
-                    label: Text('Twitter'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_TWITTER, 'Nehal Jaisalmeria'),
                   ),
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
@@ -69,7 +67,6 @@ class AboutTab extends StatelessWidget {
                             ThemeSwitcher.of(context).isDarkModeOn
                                 ? Assets.medium
                                 : Assets.medium_light)),
-                    label: Text('Medium'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_MEDIUM, 'Nehal Jaisalmeria'),
                   )
@@ -79,30 +76,27 @@ class AboutTab extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
                         child: Image.asset(Assets.instagram)),
-                    label: Text('Instagram'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_INSTAGRAM, 'Nehal Jaisalmeria'),
                   ),
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
                         child: Image.asset(Assets.facebook)),
-                    label: Text('Facebook'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_FACEBOOK, 'Nehal Jaisalmeria'),
                   ),
-                  FlatButton.icon(
+                  IconButton(
                     icon: SizedBox(
                         width: 20,
                         height: 20,
                         child: Image.asset(Assets.linkedin)),
-                    label: Text('Linkedin'),
                     onPressed: () => html.window
                         .open(Constants.PROFILE_LINKEDIN, 'Nehal Jaisalmeria'),
                   )

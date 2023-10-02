@@ -1,21 +1,22 @@
 import 'package:nehaljaisalmeria/config/constants.dart';
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
+
 class BlogWidget extends StatelessWidget {
   final blog;
   final index;
   final length;
-  const BlogWidget(this.blog,this.index,this.length);
-
+  const BlogWidget(this.blog, this.index, this.length);
 
   @override
   Widget build(BuildContext context) {
     double topBottomPadding = (index == 0 || index == length - 1) ? 16.0 : 8.0;
     return InkWell(
-      onTap: ()=>html.window.open(Constants.BLOG_URL+blog.uniqueSlug, 'adityadroid'),
+      onTap: () =>
+          html.window.open(Constants.BLOG_URL + blog.uniqueSlug, 'adityadroid'),
       child: Card(
         margin:
-        EdgeInsets.fromLTRB(16.0, topBottomPadding, 16.0, topBottomPadding),
+            EdgeInsets.fromLTRB(16.0, topBottomPadding, 16.0, topBottomPadding),
         child: Container(
           padding: EdgeInsets.all(16.0),
           child: Column(
@@ -30,13 +31,13 @@ class BlogWidget extends StatelessWidget {
               ),
               Text(
                 blog.title,
-                style: Theme.of(context).textTheme.title,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               SizedBox(
                 height: 8,
               ),
               Text(blog.content.subtitle,
-                  style: Theme.of(context).textTheme.subtitle),
+                  style: Theme.of(context).textTheme.labelMedium),
               //Text(blog.virtuals.totalClapCount)
             ],
           ),
